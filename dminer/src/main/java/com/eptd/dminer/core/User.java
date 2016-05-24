@@ -1,11 +1,15 @@
 package com.eptd.dminer.core;
 
+import java.util.ArrayList;
+
 public class User {
-	private long id;					//also id for data crawler
-	private String login;				//backup id
-	private String name;				//better id for reviewing
-	private boolean isOrg;				//whether an organization
-	private int NumOfPublicRepos;		//count of public repos
+	private long id;							//also id for data crawler
+	private String login;						//backup id
+	private String name;						//better id for reviewing
+	private boolean isOrg;						//whether an organization
+	private boolean isAssignee;					//whether an assignee for issue
+	private int numOfPublicRepos;				//count of public repos
+	private ArrayList<Repository> publicRepos;	//
 	
 
 	public long getId() {
@@ -33,11 +37,11 @@ public class User {
 	}
 
 	public int getNumOfPublicRepos() {
-		return NumOfPublicRepos;
+		return numOfPublicRepos;
 	}
 
 	public void setNumOfPublicRepos(int numOfPublicRepos) {
-		NumOfPublicRepos = numOfPublicRepos;
+		this.numOfPublicRepos = numOfPublicRepos;
 	}
 
 	public boolean isOrg() {
@@ -46,6 +50,22 @@ public class User {
 
 	public void setOrg(boolean isOrg) {
 		this.isOrg = isOrg;
+	}
+
+	public boolean isAssignee() {
+		return isAssignee;
+	}
+
+	public void setAssignee(boolean isAssignee) {
+		this.isAssignee = isAssignee;
+	}
+
+	public ArrayList<Repository> getPublicRepos() {
+		return publicRepos;
+	}
+
+	public void setPublicRepos(ArrayList<Repository> publicRepos) {
+		this.publicRepos = publicRepos;
 	}
 	
 	

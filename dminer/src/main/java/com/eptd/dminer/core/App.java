@@ -17,7 +17,7 @@ public class App
 {
     public static void main( String[] args )
     {
-    	Authorization auth = new Authorization("f9d427702d4a4a7b810c992f9e53d2235d5b0a55 ");
+    	Authorization auth = new Authorization("69af016d20ea1dc8ab821097b0828a828c079b57");
     	HttpClient httpClient = HttpClientBuilder.create().build();
     	
     	try {
