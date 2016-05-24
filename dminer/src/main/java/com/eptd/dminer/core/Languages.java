@@ -10,12 +10,14 @@ public class Languages {
 	}
 	
 	public boolean addLanguage(String type, long LOC){
+		//add a language used in a repo
 		if(this.list.add(new Language(type,LOC)))
 			return true;
 		return false;
 	}
 	
 	public long getLanguage(String type){
+		//get # of LOC of a specific language used in a repo
 		for(int i=0;i<this.list.size();i++)
 		{
 			if(this.list.get(i).getType() == type)

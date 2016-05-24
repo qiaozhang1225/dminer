@@ -29,6 +29,7 @@ public class Authorization {
 	}
 	
 	private void updateHeader(){
+		//update the header attribute of this object
 		setHeader(new BasicHeader("Authorization", "token " + OAuthToken));
 	}
 }
