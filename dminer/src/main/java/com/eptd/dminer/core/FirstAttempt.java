@@ -1,4 +1,4 @@
-package com.eptd.dminer;
+package com.eptd.dminer.core;
 
 import java.io.InputStream;
 
