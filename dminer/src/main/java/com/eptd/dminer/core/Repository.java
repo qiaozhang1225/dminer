@@ -15,6 +15,9 @@ public class Repository {
 	private ArrayList<User> contributors;
 	private Date created;
 	
-	
+	//sonar evaluation data
+	private long LOC;
+	private char SQALErating;
+	private double TDratio;
 	
 }

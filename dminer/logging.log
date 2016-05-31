@@ -1,0 +1,3 @@
+2016-05-31 05:05:24 INFO  RepositoryProcessor:75 - Project tajo has been successfully cloned to path "E:\Github\apache\tajo"
+2016-05-31 05:05:24 INFO  RepositoryProcessor:86 - Project properties file for SonarQube analysis has been created successfully to path "E:\Github\apache\tajo"
+2016-05-31 05:07:14 INFO  RepositoryProcessor:97 - Project tajo has been successfully analyzed by SonarQube
