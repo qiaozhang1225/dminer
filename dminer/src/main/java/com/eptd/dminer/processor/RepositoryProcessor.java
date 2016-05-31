@@ -71,10 +71,11 @@ public class RepositoryProcessor {
 		CMDProcessor cmd = new CMDProcessor();
 		//step 1: clone repository
 		cmd.addCommand("git clone "+ repositoryURL + " " + filePath);
-		if(cmd.execute() == 0)
+		if(cmd.execute() == 0){
+			System.out.println();
 			logger.info("Project " + projectName + " has been successfully cloned to path \"" 
 					+ filePath + "\"");
-		else{
+		}else{
 			logger.error("Project " + projectName + " failed to be cloned to path \"" 
 					+ filePath + "\"");
 			return false;
@@ -82,10 +83,11 @@ public class RepositoryProcessor {
 		//step 2: write properties file
 		SonarPropertiesWriter writer = new SonarPropertiesWriter(
 	    		projectID,projectName,login,userType,language,version,filePath);
-		if(writer.write())
+		if(writer.write()){
+			System.out.println();
 			logger.info("Project properties file for SonarQube analysis has been created successfully to path \""
 					+ filePath + "\"");
-		else{
+		}else{
 			logger.info("Project properties file for SonarQube analysis failed to be created to path \""
 					+ filePath + "\"");
 			return false;
@@ -93,9 +95,10 @@ public class RepositoryProcessor {
 		//step 3: run SonarQube analysis
 		cmd.addCommand("cd " + filePath);
 	    cmd.addCommand("sonar-runner");
-	    if(cmd.execute() == 0)
+	    if(cmd.execute() == 0){
+	    	System.out.println();
 			logger.info("Project " + projectName + " has been successfully analyzed by SonarQube");
-		else{
+	    }else{
 			logger.error("Project " + projectName + " failed to be analyzed by SonarQube");
 			return false;
 		}

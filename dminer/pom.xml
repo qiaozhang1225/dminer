@@ -21,6 +21,12 @@
       <artifactId>sonar-maven-plugin</artifactId>
       <version>5.1</version>
     </dependency>
+    <!-- http://mvnrepository.com/artifact/org.codehaus.sonar/sonar-ws-client -->
+    <dependency>
+      <groupId>org.codehaus.sonar</groupId>
+      <artifactId>sonar-ws-client</artifactId>
+      <version>5.1</version>
+    </dependency>
     <!-- finalized dependencies -->
     <dependency>
       <groupId>org.slf4j</groupId>
