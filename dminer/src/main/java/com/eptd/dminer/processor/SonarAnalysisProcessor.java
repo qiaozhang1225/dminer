@@ -3,8 +3,8 @@ package com.eptd.dminer.processor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class RepositoryProcessor {
-	private static Logger logger = LoggerFactory.getLogger(RepositoryProcessor.class);
+public class SonarAnalysisProcessor {
+	private static Logger logger = LoggerFactory.getLogger(SonarAnalysisProcessor.class);
 	
 	private String repositoryURL;
 	private String filePath;
@@ -25,7 +25,7 @@ public class RepositoryProcessor {
 	 * @param userType The type of repository owner either user or organization
 	 * @param language The primary programming language
 	 */
-	public RepositoryProcessor(
+	public SonarAnalysisProcessor(
 			String repositoryURL, String filePath, long projectID, String projectName,
 			String login, String userType, String language){
 		this.repositoryURL = repositoryURL;
@@ -49,7 +49,7 @@ public class RepositoryProcessor {
 	 * @param language The primary programming language
 	 * @param version The name of latest release tag
 	 */
-	public RepositoryProcessor(
+	public SonarAnalysisProcessor(
 			String repositoryURL, String filePath, long projectID, String projectName,
 			String login, String userType, String language, String version){
 		this.repositoryURL = repositoryURL;

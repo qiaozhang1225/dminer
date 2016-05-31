@@ -2,3 +2,6 @@ repo
 repos
 obj
 sonarqube
+username
+admin
+arraylist
